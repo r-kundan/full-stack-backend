@@ -1,11 +1,16 @@
 {
-  "name": "backendpro",
+  "name": "full_stack_backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "this is a full stack backend project",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "keywords": [
+    "javascript",
+    "backend",
+    "mongoose"
+  ],
+  "author": "renu kundan",
   "license": "ISC"
 }
