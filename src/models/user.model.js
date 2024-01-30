@@ -61,12 +61,11 @@ userSchema.pre("save",async function(next){
 })
 
 userSchema.methods.isPasswordCorrect = async function (password) {
-return await bcrypt.compare(password ,this.password) // ye return me boolean value  dega
+return await bcrypt.compare(password ,this.password)
 }
 userSchema.methods.generateAccessToken = async function (){ 
    return jwt.sign(
         {
-    // payload name : database name ye database se lege hum
             _id : this._id,
             userName: this.userName,
             fullName: this.fullName,
