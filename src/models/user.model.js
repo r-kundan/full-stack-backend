@@ -63,8 +63,7 @@ userSchema.pre("save",async function(next){
 userSchema.methods.isPasswordCorrect = async function (password) {
 return await bcrypt.compare(password ,this.password) // ye return me boolean value  dega
 }
-userSchema.methods.generateAccessToken = async function (){
-   //ye niche wala part payload h 
+userSchema.methods.generateAccessToken = async function (){ 
    return jwt.sign(
         {
     // payload name : database name ye database se lege hum
@@ -80,10 +79,8 @@ userSchema.methods.generateAccessToken = async function (){
     )
 }
 userSchema.methods.generateRefreshToken = async function (){
-     //ye niche wala part payload h 
    return jwt.sign(
     {
-// payload name : database name ye database se lege hum
         _id : this._id,
     },
     process.env.REFRESH_TOKEN_SECRET,
