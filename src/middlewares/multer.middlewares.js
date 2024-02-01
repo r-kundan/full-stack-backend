@@ -1,4 +1,5 @@
-// this is use a middleware
+// this is use as middleware
+//multer hume files ka acess deta h
 
 import multer from "multer"
 
