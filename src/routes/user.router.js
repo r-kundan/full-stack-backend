@@ -7,11 +7,11 @@ router.route("/register").post(
     //middleware added 
     upload.fields([
         {
-            name:avatar,
+            name : "avatar",
             maxCount: 1
         },
         {
-            name: coverImage,
+            name: "coverImage",
             maxCount:1
         }
     ])
