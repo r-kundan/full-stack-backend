@@ -15,4 +15,12 @@ app.use(express.urlencoded())  //ye url se data lene me kaam aata h jo url me sp
 app.use(express.static("public"))
 app.use(cookieParser())
 
+//routes import
+
+import userRouter from  "../src/routes/user.router.js"
+
+// router declaration
+
+app.use("/api/v1/users",userRouter)
+
 export default app
